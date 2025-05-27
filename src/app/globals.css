@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+
+
+.glow-purple-text {
+  text-shadow:
+    0 0 5px rgba(139, 92, 246, 0.8),
+    0 0 10px rgba(139, 92, 246, 0.6),
+    0 0 15px rgba(139, 92, 246, 0.4);
+}
+
+.glow-purple-border {
+  box-shadow:
+    0 0 5px rgba(139, 92, 246, 0.8),
+    0 0 10px rgba(139, 92, 246, 0.6),
+    0 0 15px rgba(139, 92, 246, 0.4);
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 8px rgba(139, 92, 246, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(139, 92, 246, 1);
+  }
+}
+
+.project-card:hover {
+  animation: pulseGlow 2s infinite ease-in-out;
+}
+
